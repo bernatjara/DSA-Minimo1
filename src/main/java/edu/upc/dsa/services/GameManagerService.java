@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
  */
 @Api(value = "/text", description = "Endpoint to Text Service")
 @Path("text")
-public class TextService {
+public class GameManagerService {
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
