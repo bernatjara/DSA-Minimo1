@@ -1,24 +1,27 @@
 package edu.upc.dsa.models;
 
-import edu.upc.dsa.util.RandomUtils;
+import java.util.ArrayList;
 
 public class Juego {
 
-    String id;
-    String descripcion;
-    String numeroNiveles;
-    static int lastId;
+    String id; //Nombre del juego
+    String descripcion; //Descripción del juego
+    int numeroNiveles; //Número de niveles totales en el juego
 
-    public Juego() {
-        this.id = RandomUtils.getId();
-    }
+    ArrayList<Partida> usuariosPartida = new ArrayList<Partida>();
 
-    public Juego(String id, String descripcion, String numeroNiveles) {
+
+    //Constructor público de la clase Juego.
+    public Juego(String id, String descripcion, int numeroNiveles) {
         this.id = id;
         this.descripcion = descripcion;
         this.numeroNiveles = numeroNiveles;
     }
 
+    //Constructor vacío
+    public Juego(){}
+
+    // Setters & Getters
     public String getId() {
         return this.id;
     }
@@ -36,11 +39,11 @@ public class Juego {
         this.descripcion = descripcion;
     }
 
-    public String getNumeroNiveles() {
+    public int getNumeroNiveles() {
         return numeroNiveles;
     }
 
-    public void setNumeroNiveles(String numeroNiveles) {
+    public void setNumeroNiveles(int numeroNiveles) {
         this.numeroNiveles = numeroNiveles;
     }
 
